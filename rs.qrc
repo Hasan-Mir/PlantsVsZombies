@@ -11,6 +11,13 @@
         <file>ball-shadow.png</file>
         <file>shooter1.png</file>
         <file>sunflower.png</file>
+        <file>oak1.png</file>
+        <file>oak2.png</file>
+        <file>oak3.png</file>
+        <file>oak4.png</file>
+        <file>oak5.png</file>
+        <file>oak6.png</file>
+        <file>oak7.png</file>
     </qresource>
     <qresource prefix="/musics">
         <file>throwBullet.mp3</file>

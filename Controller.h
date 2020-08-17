@@ -26,6 +26,7 @@ public:
     ~Controller();
     void addZombie(const int& velocity , const int& lives);
     void addSun();
+    void addOak();
 
 signals:
 

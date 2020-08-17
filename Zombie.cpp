@@ -1,5 +1,6 @@
 #include "Zombie.h"
 #include "Plant.h"
+#include "Oak.h"
 #include <QGraphicsScene>
 #include <QList>
 
@@ -62,8 +63,10 @@ void Zombie::moveToLeft(){
     for (size_t i = 0 ; i < collidingObjects.size() ; ++i){
         Plant * plant = dynamic_cast<Plant*>(collidingObjects[i]);
         if( plant ){
-            scene()->removeItem(collidingObjects[i]);
-            delete collidingObjects[i];
+            if(typeid(*(collidingObjects[i])) != typeid(Oak)){      // zombie destroy every plant except Oak
+                scene()->removeItem(collidingObjects[i]);
+                delete collidingObjects[i];
+            }
         }
     }
 
