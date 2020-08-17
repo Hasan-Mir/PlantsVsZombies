@@ -1,0 +1,22 @@
+<RCC>
+    <qresource prefix="/images">
+        <file>bgstepthree.png</file>
+        <file>bgstepone.png</file>
+        <file>bgsteptwo.png</file>
+        <file>zombie1.png</file>
+        <file>sun1.png</file>
+        <file>zombie2.png</file>
+        <file>zombie3.png</file>
+        <file>zombie4.png</file>
+        <file>ball-shadow.png</file>
+        <file>shooter1.png</file>
+    </qresource>
+    <qresource prefix="/musics">
+        <file>GrasswalkPvZ1.ogg</file>
+        <file>groan.ogg</file>
+        <file>coin.ogg</file>
+        <file>throwBullet.ogg</file>
+        <file>throwBullet.mp3</file>
+        <file>coin.mp3</file>
+    </qresource>
+</RCC>
