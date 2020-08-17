@@ -17,5 +17,6 @@
         <file>coin.mp3</file>
         <file>GrasswalkPvZ1.mp3</file>
         <file>groan.mp3</file>
+        <file>MainMenuPvZ1.mp3</file>
     </qresource>
 </RCC>

@@ -25,7 +25,8 @@ SOURCES += \
     SunFlower.cpp \
     View.cpp \
     Zombie.cpp \
-    main.cpp
+    main.cpp \
+    Block.cpp
 
 HEADERS += \
     Bullet.h \
@@ -36,7 +37,8 @@ HEADERS += \
     Sun.h \
     SunFlower.h \
     View.h \
-    Zombie.h
+    Zombie.h \
+    Block.h
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
