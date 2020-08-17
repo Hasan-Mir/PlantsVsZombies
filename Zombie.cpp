@@ -17,7 +17,7 @@ Zombie::Zombie(const int & pixPer50MiliSec , QTimer *timer ,
 
     // set zombie sound
     zombiePlayer = new QMediaPlayer();
-    zombiePlayer->setMedia(QUrl("qrc:/musics/groan.ogg"));
+    zombiePlayer->setMedia(QUrl("qrc:/musics/groan.mp3"));
     zombiePlayer->play();
 
     miliSec = 0;

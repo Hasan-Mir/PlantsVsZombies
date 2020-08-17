@@ -13,11 +13,9 @@
         <file>sunflower.png</file>
     </qresource>
     <qresource prefix="/musics">
-        <file>GrasswalkPvZ1.ogg</file>
-        <file>groan.ogg</file>
-        <file>coin.ogg</file>
-        <file>throwBullet.ogg</file>
         <file>throwBullet.mp3</file>
         <file>coin.mp3</file>
+        <file>GrasswalkPvZ1.mp3</file>
+        <file>groan.mp3</file>
     </qresource>
 </RCC>

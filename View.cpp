@@ -19,7 +19,7 @@ View::View()
 
     // set background music
     viewPlayer = new QMediaPlayer();
-    viewPlayer->setMedia(QUrl("qrc:/musics/GrasswalkPvZ1.ogg"));
+    viewPlayer->setMedia(QUrl("qrc:/musics/GrasswalkPvZ1.mp3"));
     viewPlayer->play();
 
     // initialize seconds to zero
