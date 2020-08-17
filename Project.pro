@@ -22,6 +22,7 @@ SOURCES += \
     Score.cpp \
     Shooter.cpp \
     Sun.cpp \
+    SunFlower.cpp \
     View.cpp \
     Zombie.cpp \
     main.cpp
@@ -33,6 +34,7 @@ HEADERS += \
     Score.h \
     Shooter.h \
     Sun.h \
+    SunFlower.h \
     View.h \
     Zombie.h
 
