@@ -10,6 +10,7 @@
         <file>zombie4.png</file>
         <file>ball-shadow.png</file>
         <file>shooter1.png</file>
+        <file>sunflower.png</file>
     </qresource>
     <qresource prefix="/musics">
         <file>GrasswalkPvZ1.ogg</file>

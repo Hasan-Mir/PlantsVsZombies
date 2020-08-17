@@ -1,5 +1,7 @@
 #include "Controller.h"
 #include "Shooter.h"
+#include "SunFlower.h"
+#include <cstdlib>
 
 
 
@@ -26,6 +28,11 @@ Controller::Controller(QObject *parent) : QObject(parent){
     scene->addItem(myShooter);
     myShooter->setPos(40+300,375);
 
+    // add a test SunFlower
+    auto mySunFlower = new SunFlower(cTimer, controllerScore , holder);
+    scene->addItem(mySunFlower);
+    mySunFlower->setPos(40,375);
+
 }
 
 Controller::~Controller() {
@@ -43,5 +50,5 @@ void Controller::addZombie(const int& velocity , const int& lives) {
 
 void Controller::addSun() {
     sunList.push_back(new Sun(scene , controllerScore , holder , cTimer));
-
+    sunList.last()->setPos( rand() % 800 , 0);
 }
