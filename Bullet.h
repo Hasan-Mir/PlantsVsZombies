@@ -17,7 +17,6 @@ public:
     explicit Bullet(QTimer *bulletTimer , const int& velocity ,
                     QGraphicsItem* parent = nullptr);
 
-
 signals:
 
 public slots:

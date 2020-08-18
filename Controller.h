@@ -30,6 +30,7 @@ public:
     void addMasterZombie(const int& velocity , const int& lives);
     void addSun();
     void addOak();
+    void addCherry();
 
 signals:
 

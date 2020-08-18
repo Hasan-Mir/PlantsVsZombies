@@ -44,6 +44,7 @@ void View::schedule(){
     if(seconds == 10 || seconds == 15){
         viewController->addMasterZombie(5 , 10);
         //viewController->addOak();
+        viewController->addCherry();
     }
 
     if(seconds % 2 == 0){

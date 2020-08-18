@@ -17,6 +17,7 @@ DEFINES += QT_DEPRECATED_WARNINGS
 
 SOURCES += \
     Bullet.cpp \
+    Cherry.cpp \
     Controller.cpp \
     MasterZombie.cpp \
     Oak.cpp \
@@ -32,6 +33,7 @@ SOURCES += \
 
 HEADERS += \
     Bullet.h \
+    Cherry.h \
     Controller.h \
     MasterZombie.h \
     Oak.h \

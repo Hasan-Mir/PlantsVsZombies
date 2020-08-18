@@ -2,6 +2,7 @@
 #include "Shooter.h"
 #include "SunFlower.h"
 #include "Oak.h"
+#include "Cherry.h"
 #include <cstdlib>
 
 
@@ -73,4 +74,10 @@ void Controller::addOak() {
     auto myOak = new Oak(cTimer , 10 , holder);
     scene->addItem(myOak);
     myOak->setPos(40,375);
+}
+
+void Controller::addCherry(){
+    auto myCherry = new Cherry(cTimer , holder);
+    scene->addItem(myCherry);
+    myCherry->setPos(380,150);
 }

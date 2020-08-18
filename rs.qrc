@@ -22,6 +22,7 @@
         <file>mZombie2.png</file>
         <file>mZombie3.png</file>
         <file>mZombie4.png</file>
+        <file>cherry.png</file>
     </qresource>
     <qresource prefix="/musics">
         <file>throwBullet.mp3</file>
@@ -33,5 +34,6 @@
         <file>bulletZombie.mp3</file>
         <file>killZombie.mp3</file>
         <file>groan6.mp3</file>
+        <file>cherrybomb.mp3</file>
     </qresource>
 </RCC>
