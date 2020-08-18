@@ -11,6 +11,10 @@ Oak::Oak(QTimer * oakTimer , int velocity , QGraphicsItem *parent)
     //set picture
     setPixmap(QPixmap(":/images/oak1.png"));
 
+    // set oak player
+    oakPlayer = new QMediaPlayer();
+    oakPlayer->setMedia(QUrl("qrc:/musics/killZombie.mp3"));
+
     // connect createSun slot
     connect(oakTimer , SIGNAL(timeout()) , this , SLOT(moveToRight()));
 
@@ -50,6 +54,8 @@ void Oak::moveToRight()
     for (size_t i = 0 ; i < collidingList.size() ; ++i){
        Zombie * zom = dynamic_cast<Zombie*>(collidingList[i]);
        if(zom){
+            // play oakPlayer
+            oakPlayer->play();
             scene()->removeItem(zom);
             delete zom;
        }

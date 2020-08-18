@@ -27,5 +27,6 @@
         <file>MainMenuPvZ1.mp3</file>
         <file>chomp.mp3</file>
         <file>bulletZombie.mp3</file>
+        <file>killZombie.mp3</file>
     </qresource>
 </RCC>
