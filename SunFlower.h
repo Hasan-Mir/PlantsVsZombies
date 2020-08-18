@@ -8,7 +8,7 @@
 #include "Score.h"
 #include "Plant.h"
 
-class SunFlower : public QObject , public QGraphicsPixmapItem , public Plant
+class SunFlower : public QObject , public Plant
 {
     Q_OBJECT
 private:

@@ -3,7 +3,7 @@
 
 Shooter::Shooter(QTimer *shooterTimer,
                  QGraphicsItem *parent)
-    : QObject() , QGraphicsPixmapItem(parent) , Plant() ,
+    : QObject() , Plant(parent) ,
       shooterTimer(shooterTimer) , timeIntervals(0)
 {
     //set picture

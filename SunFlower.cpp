@@ -5,7 +5,7 @@
 
 
 SunFlower::SunFlower(QTimer *sunflowerTimer, Score * sunflowerScore, QGraphicsItem *parent)
-    :QObject() , QGraphicsPixmapItem(parent) , Plant() ,sunflowerTimer(sunflowerTimer) , sunflowerScore(sunflowerScore)
+    :QObject() , Plant(parent) ,sunflowerTimer(sunflowerTimer) , sunflowerScore(sunflowerScore)
     , timeIntervals(0)
 {
 
@@ -27,6 +27,4 @@ void SunFlower::createSun() {
         auto sun = new Sun(scene() , sunflowerScore , parentItem() , sunflowerTimer);
         sun->setPos( x(), y());
     }
-
-
 }

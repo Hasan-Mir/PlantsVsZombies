@@ -1,6 +1,8 @@
 #include "Plant.h"
 
-Plant::Plant()
+
+Plant::Plant(QGraphicsItem *parent)
+    : QGraphicsPixmapItem(parent)
 {
 
 }

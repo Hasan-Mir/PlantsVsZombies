@@ -7,7 +7,7 @@
 #include <QMediaPlayer>
 #include "Plant.h"
 
-class Oak : public QObject , public QGraphicsPixmapItem , public Plant {
+class Oak : public QObject , public Plant {
     Q_OBJECT
 private:
     int miliSec;

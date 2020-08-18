@@ -6,7 +6,7 @@
 
 
 Oak::Oak(QTimer * oakTimer , int velocity , QGraphicsItem *parent)
-    : QObject() , QGraphicsPixmapItem(parent) , Plant() , velocity(velocity) , oakTimer(oakTimer)
+    : QObject() ,Plant(parent) , velocity(velocity) , oakTimer(oakTimer)
 {
     //set picture
     setPixmap(QPixmap(":/images/oak1.png"));
