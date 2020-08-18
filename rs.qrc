@@ -23,6 +23,9 @@
         <file>mZombie3.png</file>
         <file>mZombie4.png</file>
         <file>cherry.png</file>
+        <file>homePage.png</file>
+        <file>exitButton.png</file>
+        <file>startButton.png</file>
     </qresource>
     <qresource prefix="/musics">
         <file>throwBullet.mp3</file>
