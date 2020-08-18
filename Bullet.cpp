@@ -10,6 +10,10 @@ Bullet::Bullet(QTimer *bulletTimer, const int &velocity,
     // set picture
     setPixmap(QPixmap(":/images/ball-shadow.png"));
 
+    // set media player
+    bulletPlayer = new QMediaPlayer();
+    bulletPlayer->setMedia(QUrl("qrc:/musics/bulletZombie.mp3"));
+
     // connect to moveToRight
     connect(bulletTimer , SIGNAL(timeout()) , this , SLOT(moveToRight()));
 
@@ -24,6 +28,9 @@ void Bullet::moveToRight(){
     for (size_t i = 0 ; i < collidingList.size() ; ++i){
         if( typeid(*(collidingList[i])) == typeid (Zombie)){
             dynamic_cast<Zombie*>(collidingList[i])->decrementLives();
+
+            // play bullet player
+            bulletPlayer->play();
 
             // delete and remove bullet
             scene()->removeItem(this);
