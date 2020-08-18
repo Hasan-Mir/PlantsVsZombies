@@ -26,11 +26,17 @@ void Bullet::moveToRight(){
 
     // decrement zombies lives
     for (size_t i = 0 ; i < collidingList.size() ; ++i){
-        if( typeid(*(collidingList[i])) == typeid (Zombie)){
+        Zombie * zom = dynamic_cast<Zombie*>(collidingList[i]);
+        if(zom){
             dynamic_cast<Zombie*>(collidingList[i])->decrementLives();
 
             // play bullet player
-            bulletPlayer->play();
+            if(bulletPlayer->state() == QMediaPlayer::PlayingState){
+                bulletPlayer->setPosition(0);
+            }
+            else if (bulletPlayer->state() == QMediaPlayer::StoppedState){
+                bulletPlayer->play();
+            }
 
             // delete and remove bullet
             scene()->removeItem(this);

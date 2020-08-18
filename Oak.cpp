@@ -54,8 +54,14 @@ void Oak::moveToRight()
     for (size_t i = 0 ; i < collidingList.size() ; ++i){
        Zombie * zom = dynamic_cast<Zombie*>(collidingList[i]);
        if(zom){
-            // play oakPlayer
-            oakPlayer->play();
+
+            // play oak player
+            if(oakPlayer->state() == QMediaPlayer::PlayingState){
+                oakPlayer->setPosition(0);
+            }
+            else if (oakPlayer->state() == QMediaPlayer::StoppedState){
+                oakPlayer->play();
+            }
             scene()->removeItem(zom);
             delete zom;
        }

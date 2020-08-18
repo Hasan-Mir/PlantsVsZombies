@@ -55,6 +55,14 @@ void Controller::addZombie(const int& velocity , const int& lives) {
     zombieList.last()->setPos(800,390);
 }
 
+void Controller::addMasterZombie(const int &velocity, const int &lives)
+{
+    masterZombieList.push_back(new MasterZombie(velocity , cTimer , lives ,holder));
+    // add to the scene
+    scene->addItem(masterZombieList.last());
+    masterZombieList.last()->setPos(800,370);
+}
+
 void Controller::addSun() {
     sunList.push_back(new Sun(scene , controllerScore , holder , cTimer));
     sunList.last()->setPos( rand() % 800 , 0);
