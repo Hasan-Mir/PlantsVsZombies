@@ -60,25 +60,44 @@ void View::schedule(){
 
     if (viewController->getRound() == 1) {
         setBackgroundBrush(QBrush(QImage(":/images/bgstepone.png")));
-        if(seconds == 10 || seconds == 15){
-            viewController->addZombie(5 , 10, 1);
+        if(seconds == 50 || seconds == 54 || seconds == 57 || seconds == 59 || seconds == 60){
+            viewController->addZombie(5 , 4, 1);
         }
     }
 
      else if (viewController->getRound() == 2) {
         setBackgroundBrush(QBrush(QImage(":/images/bgsteptwo.png")));
-        if(seconds == 45 || seconds == 48 ||seconds == 50 ||seconds == 51 ||seconds == 52){
-            viewController->addZombie(5 , 10, line);
+        if( line == 1){
+            if(seconds == 45 || seconds == 48 ||seconds == 50 ||seconds == 51 ||seconds == 52){
+                viewController->addZombie(5 , 4, line);
+            }
+
+            if(seconds == 48 || seconds == 49 ||seconds == 50 ||seconds == 51 ||seconds == 52){
+                viewController->addZombie(5 , 4, line + 1);
+            }
         }
-        if(seconds == 48 || seconds == 49 ||seconds == 50 ||seconds == 51 ||seconds == 52){
-            viewController->addZombie(5 , 10, line);
+        if(line == 2){
+            if(seconds == 45 || seconds == 48 ||seconds == 50 ||seconds == 51 ||seconds == 52){
+                viewController->addZombie(5 , 4, line);
+            }
+
+            if(seconds == 48 || seconds == 49 ||seconds == 50 ||seconds == 51 ||seconds == 52){
+                viewController->addZombie(5 , 4, line - 1);
+            }
         }
+
     }
 
      else if (viewController->getRound() == 3){
         setBackgroundBrush(QBrush(QImage(":/images/bgstepthree.png")));
-        if(seconds == 50 || seconds == 54){
-            viewController->addMasterZombie(5 , 10, (rand() % 3) + 1);
+        if(seconds == 40 || seconds == 47 ||seconds == 48 ||seconds == 50 ||seconds == 53){
+            viewController->addMasterZombie(5 , 10, 1);
+        }
+        if(seconds == 44 || seconds == 47 ||seconds == 50 ||seconds == 51 ||seconds == 53){
+            viewController->addMasterZombie(5 , 10, 2);
+        }
+        if(seconds == 46 || seconds == 48 ||seconds == 50 ||seconds == 51 ||seconds == 53){
+            viewController->addMasterZombie(5 , 10, 3);
         }
     }
 
