@@ -2,7 +2,6 @@
 #define SUNFLOWER_H
 
 #include <QObject>
-#include <QGraphicsPixmapItem>
 #include <QMediaPlayer>
 #include <QTimer>
 #include "Score.h"
@@ -23,7 +22,6 @@ signals:
 
 public slots:
     void createSun();
-
 };
 
 #endif // SUNFLOWER_H

@@ -1,9 +1,14 @@
 #include "View.h"
 
+
 View::View()
 {
     //create viewController
     viewController = new Controller();
+
+    //connect view and controller
+    connect(viewController, SIGNAL(endRound(int )), this, SLOT(endRoundSlot(int )));
+    connect(this , SIGNAL(gameStart()) , viewController , SLOT(addBoard()));
 
     // create scene
     setScene(viewController->scene);
@@ -39,6 +44,9 @@ View::View()
 
     // initialize seconds to zero
     seconds = 0;
+
+    //set line
+    line = (rand() % viewController->level) + 1;
 }
 
 View::~View() {
@@ -50,12 +58,31 @@ View::~View() {
 void View::schedule(){
    ++seconds;
 
-    if(seconds == 10 || seconds == 15){
-        viewController->addZombie(5 , 10);
-        //viewController->addOak();
-        //viewController->addCherry();
+    if (viewController->getRound() == 1) {
+        setBackgroundBrush(QBrush(QImage(":/images/bgstepone.png")));
+        if(seconds == 10 || seconds == 15){
+            viewController->addZombie(5 , 10, 1);
+        }
     }
 
+     else if (viewController->getRound() == 2) {
+        setBackgroundBrush(QBrush(QImage(":/images/bgsteptwo.png")));
+        if(seconds == 45 || seconds == 48 ||seconds == 50 ||seconds == 51 ||seconds == 52){
+            viewController->addZombie(5 , 10, line);
+        }
+        if(seconds == 48 || seconds == 49 ||seconds == 50 ||seconds == 51 ||seconds == 52){
+            viewController->addZombie(5 , 10, line);
+        }
+    }
+
+     else if (viewController->getRound() == 3){
+        setBackgroundBrush(QBrush(QImage(":/images/bgstepthree.png")));
+        if(seconds == 50 || seconds == 54){
+            viewController->addMasterZombie(5 , 10, (rand() % 3) + 1);
+        }
+    }
+
+    // add sun every 2 seconds
     if(seconds % 2 == 0){
         viewController->addSun();
     }
@@ -84,8 +111,25 @@ void View::startGame()
     viewTimer = new QTimer();
     viewTimer->start(1000);
     connect(viewTimer , SIGNAL(timeout()) , this , SLOT(schedule()));
+    //connect(viewTimer , SIGNAL(timeout()) , viewController , SLOT(addBoard()));
+
+    emit gameStart();
 }
 
 void View::exitGame(){
     exit(0);
 }
+
+void View::endRoundSlot(int level)
+{
+    Controller* viewControl = viewController;
+    viewController = new Controller( level );
+
+    setScene(viewController->scene);
+    connect(viewController, SIGNAL(endRound(int )), this, SLOT(endRoundSlot(int )));
+    connect(this , SIGNAL(gameStart()) , viewController , SLOT(addBoard()));
+    emit gameStart();
+}
+
+
+

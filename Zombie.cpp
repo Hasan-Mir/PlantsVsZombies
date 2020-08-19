@@ -36,6 +36,10 @@ void Zombie::decrementLives() {
 
     // remove and delete if lives == 0
     if ( lives == 0 ){
+        emit decrementZombie();
+        deleteZomb = true;
+    }
+    if( deleteZomb ){
         scene()->removeItem(this);
         delete this;
     }
@@ -65,10 +69,10 @@ void Zombie::moveToLeft(){
         Plant * plant = dynamic_cast<Plant*>(collidingObjects[i]);
         if( plant ){
             if( ( typeid(*(collidingObjects[i])) != typeid(Oak) ) &&
-                    ( typeid(*(collidingObjects[i])) != typeid(Cherry) ) ){      // zombie destroy every plant except Oak
-                scene()->removeItem(collidingObjects[i]);
-                delete collidingObjects[i];
-            }
+                               ( typeid(*(collidingObjects[i])) != typeid(Cherry) ) ){      // zombie destroy every plant except Oak
+                           scene()->removeItem(collidingObjects[i]);
+                           delete collidingObjects[i];
+                       }
         }
     }
 

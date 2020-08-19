@@ -12,7 +12,7 @@ Sun::Sun(QGraphicsScene * sunScene , Score * sunScore ,
 
     // add to scene
     sunScene->addItem(this);
-    //setPos( rand() % 800 , 0);
+//    setPos( rand() % 750 , 0);
 
     // connect timer to move
     connect(timer , SIGNAL(timeout()) , this , SLOT(move()));

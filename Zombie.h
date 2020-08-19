@@ -8,7 +8,8 @@
 class Zombie : public QObject , public QGraphicsPixmapItem {
     Q_OBJECT
 
-protected:
+    protected:
+    bool deleteZomb;
     int miliSec;
     int lives;
     int pixPer50MiliSec;    // 20X = pixels per a second
@@ -19,6 +20,8 @@ public:
     ~Zombie();
     void decrementLives();
 
+signals:
+void decrementZombie();
 
 public slots:
     void moveToLeft();

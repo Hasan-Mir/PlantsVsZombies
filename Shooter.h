@@ -1,3 +1,4 @@
+
 #ifndef SHOOTER_H
 #define SHOOTER_H
 
@@ -9,6 +10,7 @@
 #include "Plant.h"
 
 class Shooter : public QObject , public Plant
+
 {
     Q_OBJECT
 private:

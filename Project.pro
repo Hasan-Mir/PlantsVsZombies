@@ -19,14 +19,20 @@ SOURCES += \
     Bullet.cpp \
     Button.cpp \
     Cherry.cpp \
+    CherryBoard.cpp \
     Controller.cpp \
     MasterZombie.cpp \
     Oak.cpp \
+    OakBoard.cpp \
     Plant.cpp \
+    PlantBoard.cpp \
     Score.cpp \
     Shooter.cpp \
+    ShooterBoard.cpp \
+    Shovel.cpp \
     Sun.cpp \
     SunFlower.cpp \
+    SunflowerBoard.cpp \
     View.cpp \
     Zombie.cpp \
     main.cpp \
@@ -36,14 +42,20 @@ HEADERS += \
     Bullet.h \
     Button.h \
     Cherry.h \
+    CherryBoard.h \
     Controller.h \
     MasterZombie.h \
     Oak.h \
+    OakBoard.h \
     Plant.h \
+    PlantBoard.h \
     Score.h \
     Shooter.h \
+    ShooterBoard.h \
+    Shovel.h \
     Sun.h \
     SunFlower.h \
+    SunflowerBoard.h \
     View.h \
     Zombie.h \
     Block.h

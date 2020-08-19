@@ -26,6 +26,21 @@
         <file>homePage.png</file>
         <file>exitButton.png</file>
         <file>startButton.png</file>
+        <file>cherrySelectable.jpg</file>
+        <file>cherrySelected.jpg</file>
+        <file>cherryUnSelected.jpg</file>
+        <file>index.jpg</file>
+        <file>OakSelectable.jpg</file>
+        <file>OakSelected.jpg</file>
+        <file>OakUnSelected.jpg</file>
+        <file>shooterSelectable.jpg</file>
+        <file>shooterSelected.jpg</file>
+        <file>shooterUnSelected.jpg</file>
+        <file>sunflowerSelectable.jpg</file>
+        <file>sunflowerSelected.jpg</file>
+        <file>sunflowerUnSelected.jpg</file>
+        <file>selectedShovle.png</file>
+        <file>shovel.png</file>
     </qresource>
     <qresource prefix="/musics">
         <file>throwBullet.mp3</file>

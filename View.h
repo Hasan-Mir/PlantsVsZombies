@@ -19,6 +19,8 @@ private:
     QMediaPlayer * viewPlayer2;
     Button * startGameButton;
     Button * exitGameButton;
+    int line;
+
 public:
     explicit View();
     ~View();
@@ -28,7 +30,11 @@ public slots:
     void startGame();
     void exitGame();
 
+    void endRoundSlot(int );
+
+
 signals:
+    void gameStart();
 
 };
 
